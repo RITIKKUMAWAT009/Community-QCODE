@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "530302670295",
+    "project_id": "fir-series-b33e2",
+    "storage_bucket": "fir-series-b33e2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530302670295:android:affd31154235caf0b66792",
+        "android_client_info": {
+          "package_name": "com.qcode.community"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBY9kZi9gG5QWjuyaCmEGmNBkiPPqjyJFU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
