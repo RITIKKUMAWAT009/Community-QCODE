@@ -17,7 +17,7 @@ class ForgotPasswordController extends GetxController{
   //send reset password email
 sendResetPasswordEmail()async{
   try{
-    FullScreenLoader.openLoadingDialog('We are processing your request', 'assets/images/animations/141594-animation-of-docer.json');
+    FullScreenLoader.openLoadingDialog('We are processing your request', 'assets/animation/141594-animation-of-docer.json');
     final bool isConnected=await NetworkManager.instance.isConnected();
     if(!isConnected){
       FullScreenLoader.stopLoading();
@@ -41,7 +41,7 @@ Loaders.errorSnackBar(title: 'Oh Snap',message: e.toString());
 
 resendResetPasswordEmail(String email)async{
   try{
-    FullScreenLoader.openLoadingDialog('We are processing your request', 'assets/images/animations/141594-animation-of-docer.json');
+    FullScreenLoader.openLoadingDialog('We are processing your request', 'assets/animation/141594-animation-of-docer.json');
     final bool isConnected=await NetworkManager.instance.isConnected();
     if(!isConnected){
       FullScreenLoader.stopLoading();

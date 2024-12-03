@@ -20,6 +20,8 @@ class SignUpForm extends StatelessWidget {
     final isDark = HelperFunctions.isDarkMode(context);
     return Form(
       key: controller.signUpForKey,
+      autovalidateMode: AutovalidateMode.onUserInteraction,
+  
       child: Column(
         children: [
           Row(

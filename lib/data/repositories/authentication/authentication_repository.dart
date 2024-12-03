@@ -1,10 +1,12 @@
 import 'dart:async';
 
+import 'package:community/core/bindings/navigation_menu.dart';
 import 'package:community/core/utils/exceptions/firebase_auth_exceptions.dart';
 import 'package:community/core/utils/exceptions/firebase_exceptions.dart';
 import 'package:community/core/utils/exceptions/format_exceptions.dart';
 import 'package:community/core/utils/exceptions/platform_exceptions.dart';
 import 'package:community/core/utils/popups/full_screen_loader.dart';
+import 'package:community/core/utils/theme/logging/logger.dart';
 import 'package:community/modules/auth/views/login.dart';
 import 'package:community/modules/auth/views/verify_email.dart';
 import 'package:community/modules/onBoarding/views/on_boarding.dart';
@@ -14,6 +16,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:logger/logger.dart';
 
 
 class AuthenticationRepository extends GetxController {
@@ -28,6 +31,7 @@ class AuthenticationRepository extends GetxController {
   void onReady() {
     super.onReady();
     // FlutterNativeSplash.remove();
+    RLoggerHelper.debug("onReady");
     screenRedirect();
   }
 
@@ -35,7 +39,7 @@ class AuthenticationRepository extends GetxController {
     final user = _auth.currentUser;
     if (user != null) {
       if (user.emailVerified) {
-        // Get.offAll(() => const NavigationExample(),transition: Transition.zoom,duration: const Duration(milliseconds: 600));
+         Get.offAll(() => const NavigationExample(),transition: Transition.zoom,duration: const Duration(milliseconds: 600));
       } else {
         Get.offAll(() => VerifyEmailScreen(
               email: _auth.currentUser?.email,
@@ -153,7 +157,7 @@ class AuthenticationRepository extends GetxController {
   Future<void> logout() async {
     try {
       FullScreenLoader.openLoadingDialog('Please wait...Logging out...',
-          "assets/images/animations/141594-animation-of-docer.json");
+          "assets/animation/141594-animation-of-docer.json");
       Future.delayed(
         const Duration(seconds: 4),
         () async {

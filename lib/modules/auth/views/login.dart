@@ -17,8 +17,9 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.only(top: Sizes.defaultSpace),
+          padding: EdgeInsets.symmetric(horizontal:Sizes.defaultSpace,vertical: Sizes.defaultSpace),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               //logo ,title,subTitle
             const  LoginHeader(),

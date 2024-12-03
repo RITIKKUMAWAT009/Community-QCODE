@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
      return GetMaterialApp(
-      title: 'Eccommerce App',
+      title: 'Community QCODE',
 themeMode: ThemeMode.system,
       darkTheme: RAppTheme.darkTheme,
       debugShowCheckedModeBanner: false,

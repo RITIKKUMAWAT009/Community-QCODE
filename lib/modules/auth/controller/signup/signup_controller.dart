@@ -2,7 +2,9 @@
 import 'package:community/core/utils/helper/network_connectivity.dart';
 import 'package:community/core/utils/popups/full_screen_loader.dart';
 import 'package:community/core/utils/popups/loaders.dart';
+import 'package:community/data/models/user_model.dart';
 import 'package:community/data/repositories/authentication/authentication_repository.dart';
+import 'package:community/data/repositories/user/user_repository.dart';
 import 'package:community/modules/auth/views/verify_email.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
@@ -45,26 +47,26 @@ class SignUpController extends GetxController {
       }
       FullScreenLoader.openLoadingDialog(
           'We are processing your information....',
-          'assets/images/animations/141594-animation-of-docer.json');
+          'assets/animation/141594-animation-of-docer.json');
          //register user in firebase authentication and store data in firebase
       print('creating userCredential');
       final userCredential = await AuthenticationRepository.instance
           .registerUserWithEmailAndPassword(email.text, password.text);
       //save authenticated user data in the firestore
       print('Creating newUser');
-      // final newUser = UserModel(
-      //     id: userCredential.user!.uid,
-      //     firstName: firstName.text.trim(),
-      //     lastName: lastName.text.trim(),
-      //     userName: userName.text.trim(),
-      //     email: email.text.trim(),
-      //     phoneNumber: phoneNumber.text.trim(),
-      //     profilePicture: "");
-      // print('userRepoInstance');
+      final newUser = UserModel(
+          id: userCredential.user!.uid,
+          firstName: firstName.text.trim(),
+          lastName: lastName.text.trim(),
+          userName: userName.text.trim(),
+          email: email.text.trim(),
+          phoneNumber: phoneNumber.text.trim(),
+          profilePicture: "");
+      print('userRepoInstance');
       //TODO:
-      // final userRepository=Get.put(UserRepository());
+      final userRepository=Get.put(UserRepository());
       print('saving user to db ');
-  // await  userRepository.saveUserRecord(newUser);
+  await  userRepository.saveUserRecord(newUser);
       //Show success message
       print('success snackbar');
 Loaders.successSnackBar(title: 'Congratulations',message: 'Your account has been created');

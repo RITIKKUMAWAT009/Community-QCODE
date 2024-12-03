@@ -1,26 +1,36 @@
 {
   "project_info": {
-    "project_number": "530302670295",
-    "project_id": "fir-series-b33e2",
-    "storage_bucket": "fir-series-b33e2.firebasestorage.app"
+    "project_number": "862776567455",
+    "project_id": "tripplan-de193",
+    "storage_bucket": "tripplan-de193.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:530302670295:android:affd31154235caf0b66792",
+        "mobilesdk_app_id": "1:862776567455:android:c98de48a487be0bcb9a4aa",
         "android_client_info": {
           "package_name": "com.qcode.community"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "862776567455-qs4v5ss2r8qigel3v5b2ietdhuvds48t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyBY9kZi9gG5QWjuyaCmEGmNBkiPPqjyJFU"
+          "current_key": "AIzaSyD1HgbhWRlZoszG_qgpYJ86_tHrYcHhRIw"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "862776567455-qs4v5ss2r8qigel3v5b2ietdhuvds48t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

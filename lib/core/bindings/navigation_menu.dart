@@ -1,6 +1,7 @@
 
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:community/core/utils/helper/helper_functions.dart';
+import 'package:community/modules/home/views/feed_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -85,7 +86,7 @@ class NavigationExample extends StatelessWidget {
 class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
   final screen = [
-    Container(color: Colors.red,),
+    FeedPage(),
     Container(color: Colors.green,),
     Container(color: Colors.blue,),
     Container(color: Colors.yellow,),

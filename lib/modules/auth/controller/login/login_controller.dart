@@ -30,7 +30,7 @@ final GlobalKey<FormState> loginFormKey=GlobalKey<FormState>();
 Future<void> emailAndPasswordSignIn()async{
   try{
     //Start loading
-    FullScreenLoader.openLoadingDialog('Logging you in...', 'assets/images/animations/141594-animation-of-docer.json');
+    FullScreenLoader.openLoadingDialog('Logging you in...', 'assets/animation/141594-animation-of-docer.json');
 
     //check internet connectivity
     final isConnected=await NetworkManager.instance.isConnected();
@@ -66,7 +66,7 @@ Future<void> emailAndPasswordSignIn()async{
 
 Future<void> googleSignIn()async{
     try{
-      FullScreenLoader.openLoadingDialog('Logging in...', 'assets/images/animations/141594-animation-of-docer.json');
+      FullScreenLoader.openLoadingDialog('Logging in...', 'assets/animation/141594-animation-of-docer.json');
 
       //checking network connectivity
       final bool isConnected=await NetworkManager.instance.isConnected();

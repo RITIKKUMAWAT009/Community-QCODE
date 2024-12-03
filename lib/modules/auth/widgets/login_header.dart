@@ -1,6 +1,9 @@
 
 
+import 'package:community/core/utils/helper/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:lottie/lottie.dart';
 
 import '../../../core/utils/constants/image_const.dart';
 import '../../../core/utils/constants/sizes.dart';
@@ -17,12 +20,15 @@ class LoginHeader extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-         Image(
-          height: 150,
-          color: Colors.blue,
-          fit: BoxFit.fill,
-          image: AssetImage(ImageConstant.appLogo),
-        ),
+        SizedBox(height: 40,),
+
+         Center(
+           child: Lottie.asset(
+            height:HelperFunctions.screenHeight()*0.25,
+           AnimationConstant.onBoardingAnim3,),
+         ),
+        
+        SizedBox(height: 40,),
         Text(
           TextConstant.loginTitle,
           style: Theme.of(context).textTheme.headlineMedium,

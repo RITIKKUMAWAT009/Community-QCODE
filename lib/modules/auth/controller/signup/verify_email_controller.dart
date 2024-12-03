@@ -3,6 +3,7 @@ import 'dart:async';
 
 import 'package:community/core/utils/constants/text_constant.dart';
 import 'package:community/core/utils/popups/loaders.dart';
+import 'package:community/core/widgets/success_screen/success_screen.dart';
 import 'package:community/data/repositories/authentication/authentication_repository.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
@@ -41,11 +42,11 @@ class VerifyEmailController extends GetxController {
       if (user?.emailVerified ?? false) {
         timer.cancel();
         //TODO:
-        // Get.off(() => SuccessScreen(
-        //     onPressed: () => AuthenticationRepository.instance.screenRedirect(),
-        //     image: 'assets/images/animations/72462-check-register.json',
-        //     title: TextConstant.yourAccountCreatedTitle,
-        //     subTitle: TextConstant.yourAccountCreatedSubTitle),transition: Transition.zoom,duration: const Duration(milliseconds: 1));
+        Get.off(() => SuccessScreen(
+            onPressed: () => AuthenticationRepository.instance.screenRedirect(),
+            image: 'assets/animation/72462-check-register.json',
+            title: TextConstant.yourAccountCreatedTitle,
+            subTitle: TextConstant.yourAccountCreatedSubTitle),transition: Transition.zoom,duration: const Duration(milliseconds: 1));
       }
     });
   }
@@ -57,11 +58,11 @@ class VerifyEmailController extends GetxController {
     if (currentUser != null && currentUser.emailVerified) {
       //TODO:
       
-      // Get.off(() => SuccessScreen(
-      //     onPressed: AuthenticationRepository.instance.screenRedirect(),
-      //     image: 'assets/images/animations/72462-check-register.json',
-      //     title: TextConstant.yourAccountCreatedTitle,
-      //     subTitle: TextConstant.yourAccountCreatedSubTitle),transition: Transition.zoom,duration: const Duration(milliseconds: 600));
+      Get.off(() => SuccessScreen(
+          onPressed: AuthenticationRepository.instance.screenRedirect(),
+          image: 'assets/animation/72462-check-register.json',
+          title: TextConstant.yourAccountCreatedTitle,
+          subTitle: TextConstant.yourAccountCreatedSubTitle),transition: Transition.zoom,duration: const Duration(milliseconds: 600));
     }
   }
 }

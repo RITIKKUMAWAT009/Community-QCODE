@@ -1,4 +1,5 @@
 
+import 'package:community/core/utils/helper/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -23,6 +24,7 @@ class LoginForm extends StatelessWidget {
     final controller = Get.put(LoginController());
     return Form(
       key: controller.loginFormKey,
+      autovalidateMode:AutovalidateMode.onUserInteraction ,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: Sizes.spaceBtwSections),
         child: Column(
@@ -34,9 +36,9 @@ class LoginForm extends StatelessWidget {
               keyboardType: TextInputType.emailAddress,
               validator: (value) => Validator.validateEmail(value),
               decoration: InputDecoration(
-                  labelText: TextConstant.email,
-                  labelStyle: Theme.of(context).textTheme.bodyMedium,
-                  prefixIcon: const Icon(Iconsax.direct_right)),
+                  label: Text(TextConstant.email,style: 
+                Theme.of(context).textTheme.bodyMedium?.copyWith(color:HelperFunctions.isDarkMode(context)?Colors.white:Colors.black),
+                  ),prefixIcon: const Icon(Iconsax.direct_right)),
             ),
             const SizedBox(
               height: Sizes.spaceBtwInputFields,
@@ -46,9 +48,14 @@ class LoginForm extends StatelessWidget {
                 controller: controller.passwordController,
                 validator: (value) => Validator.validateEmptyText('Password',value),
                 obscureText: controller.hidePassword.value,
-                decoration: InputDecoration(
-                    labelText: TextConstant.password,
-                    labelStyle: Theme.of(context).textTheme.bodyMedium,
+                decoration: InputDecoration( 
+                  label: Text(TextConstant.password,style: 
+                Theme.of(context).textTheme.bodyMedium?.copyWith(color:HelperFunctions.isDarkMode(context)?Colors.white:Colors.black),
+                  ),
+                    // labelText: TextConstant.password,
+                    // labelStyle: Theme.of(context).textTheme.bodyMedium,
+                  // labelStyle: Theme.of(context).textTheme.bodyMedium?.copyWith(color:HelperFunctions.isDarkMode(context)?Colors.white:Colors.black),
+
                     prefixIcon: const Icon(Iconsax.password_check),
                     suffixIcon: IconButton(
                       icon: controller.hidePassword.value?const Icon(Iconsax.eye_slash):const Icon(Icons.remove_red_eye_outlined),

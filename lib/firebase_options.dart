@@ -47,29 +47,31 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyB5l4IKJLr2g3Co_j3fHI4RYPGkQPAQBpU',
-    appId: '1:530302670295:web:b9a56486c1f57541b66792',
-    messagingSenderId: '530302670295',
-    projectId: 'fir-series-b33e2',
-    authDomain: 'fir-series-b33e2.firebaseapp.com',
-    storageBucket: 'fir-series-b33e2.firebasestorage.app',
-    measurementId: 'G-W9RH5FTZWD',
+    apiKey: 'AIzaSyAtRufv0iF2ov2zY24OLT4uFZntQaFIJpA',
+    appId: '1:862776567455:web:3190cc55954cc559b9a4aa',
+    messagingSenderId: '862776567455',
+    projectId: 'tripplan-de193',
+    authDomain: 'tripplan-de193.firebaseapp.com',
+    storageBucket: 'tripplan-de193.appspot.com',
+    measurementId: 'G-191904PEYH',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBY9kZi9gG5QWjuyaCmEGmNBkiPPqjyJFU',
-    appId: '1:530302670295:android:affd31154235caf0b66792',
-    messagingSenderId: '530302670295',
-    projectId: 'fir-series-b33e2',
-    storageBucket: 'fir-series-b33e2.firebasestorage.app',
+    apiKey: 'AIzaSyD1HgbhWRlZoszG_qgpYJ86_tHrYcHhRIw',
+    appId: '1:862776567455:android:c98de48a487be0bcb9a4aa',
+    messagingSenderId: '862776567455',
+    projectId: 'tripplan-de193',
+    storageBucket: 'tripplan-de193.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCOIWMGWgioEvTOa0YAv1RFNhYzB0wtQyQ',
-    appId: '1:530302670295:ios:51fb2a13c59b6ebdb66792',
-    messagingSenderId: '530302670295',
-    projectId: 'fir-series-b33e2',
-    storageBucket: 'fir-series-b33e2.firebasestorage.app',
+    apiKey: 'AIzaSyDWP4ycp1g2yOOUV5GUCqitf5V24uxJiu0',
+    appId: '1:862776567455:ios:4bb549a73b033ee4b9a4aa',
+    messagingSenderId: '862776567455',
+    projectId: 'tripplan-de193',
+    storageBucket: 'tripplan-de193.appspot.com',
+    iosClientId: '862776567455-pan0635tu266cs3020fmb6mbbh195rt5.apps.googleusercontent.com',
     iosBundleId: 'com.qcode.community',
   );
+
 }
